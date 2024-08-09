@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "vazir";
+  src: url(../fonts/Vazir.eot), url(../fonts/Vazir.ttf),
+    url(../fonts/Vazir.woff), url(../fonts/Vazir.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "vazir";
+  direction: rtl;
+}
+
+body {
+  width: 350px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+#container {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+#about-link-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#about-link {
+  color: #6a11cb;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+#about-link:hover {
+  color: #2575fc;
+}
+
+#new-task-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#new-task-input.error {
+  border-color: #ff4b2b;
+  animation: shake 0.5s ease;
+}
+
+#add-task-btn {
+  padding: 0.5rem;
+  width: 100%;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#add-task-btn:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+#error {
+  color: #a31210;
+  display: none;
+  margin-bottom: 10px;
+}
+
+#task-list {
+  margin-top: 0.3rem;
+  list-style: none;
+  padding: 0;
+}
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: rgba(219, 219, 219, 0.9);
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+  border-radius: 0.2rem;
+  position: relative;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#task-list li.completed {
+  background: linear-gradient(to right, #28a745, #4caf50);
+  color: #fff;
+}
+
+#task-list li span {
+  flex-grow: 1;
+  margin: 0 0.5rem;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  margin-right: 0.5rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #f3f3f3;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border: 2px solid #6a11cb;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  margin-right: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button.edit-btn {
+  background: linear-gradient(to right, #2b4eff, #cc41ff);
+  color: #fff;
+}
+
+button.edit-btn:hover {
+  background: linear-gradient(to right, #2b4fff, #c942fb);
+}
+
+button.delete-btn {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+}
+
+button.delete-btn:hover {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+button.save-btn {
+  background: linear-gradient(to right, #28a745, #4caf50);
+  color: #fff;
+}
+
+button.save-btn:hover {
+  background: linear-gradient(to right, #4caf50, #28a745);
+}
+
+.edit-input {
+  width: calc(100% - 60px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
