@@ -1,14 +1,15 @@
 # Task-Manager-simple
 
 🔔 A simple and functional extension to manage tasks in your Chrome browser 💫
-<br>
+
+<hr>
 
 ### download 
 | version    | Link |
 | -------- | ------- |
 | first  |  [link](https://s32.picofile.com/file/8478230318/tasklist.zip.html)   | 
 
-<br>
+<hr>
 
 ### how to install
 
