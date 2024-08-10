@@ -1,6 +1,13 @@
 # Task-Manager-simple
 
 🔔 A simple and functional extension to manage tasks in your Chrome browser 💫
+<br>
+
+### download
+| version    | Link |
+| -------- | ------- |
+| first  |  [link](https://github.com/Alirezamajidiyan/TodoExtention/blob/main/tasklist.zip)   | 
+
 
 ### how to install
 
@@ -14,8 +21,5 @@
 
 ##### 🥳 Congratulations, the plugin has been successfully installed for you ✅
 
-| version    | Link |
-| -------- | ------- |
-| first  |  [link](https://github.com/Alirezamajidiyan/TodoExtention/blob/main/tasklist.zip)   |
 
 💯 Shortcut extension: `Ctrl+Shift+y`
