@@ -130,3 +130,8 @@ function editTask(item, textSpan, editBtn) {
   item.replaceChild(saveBtn, editBtn);
   editInput.focus();
 }
+
+document.addEventListener('contextmenu',(e)=>{
+  e.preventDefault();
+  alert('شما نمیتوانید از کلیک راست استفاده کنید')
+})
