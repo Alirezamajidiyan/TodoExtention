@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "مدیریت کارها - TaskMaster",
   "description": "این اکستنشن توسط علیرضا توسعه داده شده و برای مدیریت کارها استفاده می‌شود.",
-  "version": "1.0",
+  "version": "1.0.1",
   "action": {
     "default_popup": "index.html"
   },
