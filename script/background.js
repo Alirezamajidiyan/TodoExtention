@@ -1,13 +1,16 @@
-chrome.runtime.onInstalled.addListener(function() {
-  console.log("Extension installed and ready!");
+chrome.runtime.onInstalled.addListener(() => {
+  console.log("Extension installed and commands registered");
 });
 
-chrome.commands.onCommand.addListener(function (command) {
-  if (command === "add-task") {
-      if (chrome.action) {
-          chrome.action.openPopup();  // For Chrome
-      } else if (browser.action) {
-          browser.action.openPopup(); // For Firefox
-      }
+chrome.commands.onCommand.addListener((command) => {
+  switch (command) {
+    case "open_popup":
+      chrome.action.openPopup();
+      break;
+    case "open_about":
+      chrome.runtime.openOptionsPage();
+      break;
+    default:
+      console.log("Unknown command");
   }
 });
